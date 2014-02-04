@@ -4,7 +4,7 @@ unsigned long duration;
 
 static unsigned long totalFlow = 0;  // measures how many 1/6100th Litres of fluid have passed since sketch started
 static unsigned long totalDur = 0;
-void countFlow() 
+void countFlow()
 {
   totalFlow++;
 }

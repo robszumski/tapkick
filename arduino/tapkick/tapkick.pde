@@ -214,11 +214,11 @@ void getRFID() {
 
   if(Serial1.available() > 0) {
     if((val = Serial1.read()) == 2) {                  // check for header
-      bytesread = 0; 
+      bytesread = 0;
       while (bytesread < 12) {                        // read 10 digit code + 2 digit checksum
         if( Serial1.available() > 0) {
           val = Serial1.read();
-          if((val == 0x0D)||(val == 0x0A)||(val == 0x03)||(val == 0x02)) { // if header or stop bytes before the 10 digit reading 
+          if((val == 0x0D)||(val == 0x0A)||(val == 0x03)||(val == 0x02)) { // if header or stop bytes before the 10 digit reading
             break;                                    // stop reading
           }
 
@@ -243,8 +243,8 @@ void getRFID() {
           };
 
           bytesread++;                                // ready to read next digit
-        } 
-      } 
+        }
+      }
 
       // Output to Serial1:
 
@@ -252,7 +252,7 @@ void getRFID() {
         for (int i=0; i<5; i++) {
           lastcode[i] = code[i];
         }
-        
+
         //--- Turn on Taps
         openTaps();
       }

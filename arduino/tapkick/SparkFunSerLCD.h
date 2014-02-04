@@ -1,7 +1,7 @@
-/* 
+/*
         NOTE: you must: #include <SoftwareSerial.h>
         BEFORE including the class header file
-        
+
                                 allen joslin
                                 payson productions
                                 allen@joslin.net
@@ -38,7 +38,7 @@ private:
 
 public:
    SparkFunSerLCD ( int pin, int numRows, int numCols, int posBase=1 );
-   void setup ( int brightPcnt=100, boolean startEmpty=true ); 
+   void setup ( int brightPcnt=100, boolean startEmpty=true );
 
    void on ();
    void off ();
